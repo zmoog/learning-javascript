@@ -1,0 +1,11 @@
+[{  
+    "id": 1,  
+    "text": "Node 1",  
+    "state": "closed",
+    "attributes": {}
+},{  
+    "id": 2,  
+    "text": "Node 2",  
+    "state": "closed",  
+    "attributes": {}
+}]  
