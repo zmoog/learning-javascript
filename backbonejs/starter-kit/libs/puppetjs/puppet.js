@@ -30,4 +30,23 @@
 
   	});
 
+	// Puppet.Controller
+	// -------------------
+
+	var Controller = Puppet.Controller = function(options) {
+		options || (options = {});
+		this.initialize.apply(this, arguments);
+	};
+
+	_.extend(Controller.prototype, Backbone.Events, {
+
+		initialize: function(){}
+
+	});
+
+
+	// Set up inheritance for the event aggregator, and controller.
+	EventAggregator.extend = Controller.extend = Backbone.Model.extend
+
+
 }).call(this);

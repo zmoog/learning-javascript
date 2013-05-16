@@ -25,58 +25,58 @@ var ibook = {
 ibook.Router = Backbone.Router.extend({
 
     routes: {
-        "home":                 "home"
+        "home": "home"
     },
 
-    initialize: function() {
-    },
+    initialize: function() {},
 
     home: function() {
 
+        //
+        // Main views
+        //
         ibook.treeView = new ibook.TreeView({el: $('#tree-container')});
+        ibook.detailView = new ibook.DetailView({el: $('#detail-container')});
+		
+        //
+        // Modal views
+        //
+        ibook.renameModalView = new ibook.RenameModalView({el: $('#operation-modal')});
+        ibook.deleteModalView = new ibook.DeleteModalView({el: $('#operation-modal')});
 
-		ibook.detailView = new ibook.DetailView({el: $('#detail-container')});
+        //
+        // Support views
+        //
+        ibook.loadingView = new ibook.LoadingView();
 
-        // $('#tree-container').html(ibook.treeView.render().el);
+        //
+        // Render
+        //
         ibook.treeView.render();
         ibook.detailView.render();
-
-        //$('#detail-container').html(ibook.detailView.render({}).el);
-        // console.log('home');
-    },
+    }
 
 
 });
 
 
 $(document).on("ready", function () {
-    ibook.loadTemplates(["TreeView", "DetailView"],
+    ibook.loadTemplates(["LoadingView", "TreeView", "DetailView", "RenameModalView", "DeleteModalView"],
         function () {
             ibook.router = new ibook.Router();
             Backbone.history.start();
 
+            //
+            // Event Aggregator
+            //
             ibook.eventAggregator = new Puppet.EventAggregator();
 
-            // Event Aggregator 
+            //
+            // Controllers
+            //
+            ibook.MainController = new ibook.MainController();
+            ibook.renameController = new ibook.RenameController();
+            ibook.deleteController = new ibook.DeleteController();
 
-            ibook.eventAggregator.on('node:selected', function(node) { 
-                $.get('data/' + node.id + '.json', function(data) {
-                    console.log('data', data);
-                    ibook.detailView.render(data);
-                }); 
-            });
-
-            ibook.eventAggregator.on('detail:rename', function(options) { 
-                console.log('got rename', options);
-                ibook.treeView.rename(options.id, options.newName);
-            });
-
-            ibook.eventAggregator.on('detail:delete', function(options) { 
-                console.log('got delete', options);
-            });
-
-            ibook.eventAggregator.on('detail:move', function(options) { 
-                console.log('got move', options);
-            });
         });
 });

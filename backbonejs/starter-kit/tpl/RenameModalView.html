@@ -1,0 +1,13 @@
+
+    	<div class="modal-header">
+    		<button type="button" class="close" data-function="cancel-rename" aria-hidden="true">&times;</button>
+    		<h3>Rinomina <%= text %></h3>
+    	</div>
+    	<div class="modal-body">
+    		<p><input id="modal-new-name" type="text" name="new-name" value="<%= text %>"></p>
+            <div id="operation-modal-alert"></div>
+    	</div>
+    	<div class="modal-footer">
+    		<a href="#" class="btn" data-function="cancel-rename">Chiudi</a>
+    		<a href="#" class="btn btn-primary" data-function="confirm-rename">Conferma</a>
+    	</div>

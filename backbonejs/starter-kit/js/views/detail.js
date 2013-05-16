@@ -1,23 +1,28 @@
 ibook.DetailView = Backbone.View.extend({
 
 	events: {
-		"click .rename": "rename",
-		"click .delete": "deleteNode",
-		"click .move": "move"
+		"click .rename": "startRename",
+		"click .delete": "startDelete",
+		"click .move": "startMove"
 	},
 
 	initialize: function() {},
 
-    rename: function() {
-    	ibook.eventAggregator.trigger('detail:rename', {id: '1', newName: 'node renamed'});
+    startRename: function() {
+    	ibook.eventAggregator.trigger('detail:start-rename');
     },
 
-    deleteNode: function() {
-    	ibook.eventAggregator.trigger('detail:delete', {id: '1'});
+    startDelete: function() {
+        console.log('detail:start-delete')
+    	ibook.eventAggregator.trigger('detail:start-delete');
     },
 
-    move: function() {
-    	ibook.eventAggregator.trigger('detail:move', {source: '1', target: '2'});
+    startMove: function() {
+    	ibook.eventAggregator.trigger('detail:start-move');
+    },
+
+    renderLoading: function() {
+        this.$el.html(ibook.loadingView.render().el);
     },
 
     render: function(data) {

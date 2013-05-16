@@ -1,0 +1,13 @@
+
+        <div class="modal-header">
+            <button type="button" class="close" data-function="cancel-delete" aria-hidden="true">&times;</button>
+            <h3>Rimuovi <%= text %></h3>
+        </div>
+        <div class="modal-body">
+            <p>Sei sicuro di voler rimuovere <strong><%= text %></strong>?</p>
+            <div id="operation-modal-alert"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-function="cancel-delete">Chiudi</a>
+            <a href="#" class="btn btn-danger" data-function="confirm-delete">Conferma</a>
+        </div>
