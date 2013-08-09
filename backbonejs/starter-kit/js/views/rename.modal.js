@@ -5,8 +5,7 @@ ibook.RenameModalView = Backbone.View.extend({
 		'click [data-function="confirm-rename"]': 'rename'
 	},
 
-	initialize: function() {
-	},
+	initialize: function() {},
 
 	show: function(data) {
 		this.render(data);
@@ -17,14 +16,25 @@ ibook.RenameModalView = Backbone.View.extend({
 		this.$el.modal('hide');
 	},
 
-	error: function(data) {
-		this.$el.modal('hide');
-		$('operation-modal-alert', this.$el).html('Oooops!');
+	error: function(options) {
+		$('#operation-modal-alert', this.$el).html(ibook.alertView.render({message: options.reason, type: 'alert-error'}).el);
 	},
 
-	rename: function(data) {
+	rename: function() {
+
 		var newName = $('input[name="new-name"]', this.$el).val();
+		
 		ibook.eventAggregator.trigger('detail:confirm-rename', newName);
+
+		// //var errors = Backbone.Validator.validate({name: newName}, this.validations);
+
+		// console.log('errors', errors);
+
+		// if (!errors) {
+		// } else {
+		// 	console.log(ibook.validationErrorView.render(errors).el);
+		// }
+
 	},
 
     render: function(data) {

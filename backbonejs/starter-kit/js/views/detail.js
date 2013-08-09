@@ -2,7 +2,8 @@ ibook.DetailView = Backbone.View.extend({
 
 	events: {
 		"click .rename": "startRename",
-		"click .delete": "startDelete",
+        "click .delete": "startDelete",
+		"click .upload": "startUpload",
 		"click .move": "startMove"
 	},
 
@@ -14,7 +15,12 @@ ibook.DetailView = Backbone.View.extend({
 
     startDelete: function() {
         console.log('detail:start-delete')
-    	ibook.eventAggregator.trigger('detail:start-delete');
+        ibook.eventAggregator.trigger('detail:start-delete');
+    },
+
+    startUpload: function() {
+        //console.log('detail:start-upload')
+    	ibook.eventAggregator.trigger('detail:start-upload');
     },
 
     startMove: function() {

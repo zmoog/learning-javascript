@@ -1,0 +1,16 @@
+{
+	"name": "Tipo X",
+	"properties":
+	[
+		{"name": "ciccio1", "type": "text", "text": "This is a property. Enjoy."},
+		{"name": "ciccio2", "type": "check", "text": "This is a property. Enjoy."},
+		{"name": "ciccio3", "type": "text", "text": "This is a property. Enjoy."},
+		{"name": "ciccio4", "type": "text", "text": "This is a property. Enjoy."},
+		{"name": "ciccio5", "type": "text", "text": "This is a property. Enjoy."},
+		{"name": "ciccio6", "type": "text", "text": "This is a property. Enjoy."},
+		{"name": "ciccio7", "type": "text", "text": "This is a property. Enjoy."},
+		{"name": "ciccio8", "type": "text", "text": "This is a property. Enjoy."},
+		{"name": "ciccio9", "type": "text", "text": "This is a property. Enjoy."},
+		{"name": "ciccio0", "type": "text", "text": "This is a property. Enjoy."}
+	]
+}

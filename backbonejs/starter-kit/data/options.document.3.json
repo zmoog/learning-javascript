@@ -1,0 +1,7 @@
+{
+	"options": [
+		{"value": "1", "label": "Consensi cliente (DUC)"},
+		{"value": "2", "label": "Patente"},
+		{"value": "3", "label": "Carta d'identità"}
+	]
+}

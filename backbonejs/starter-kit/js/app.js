@@ -44,10 +44,18 @@ ibook.Router = Backbone.Router.extend({
         ibook.renameModalView = new ibook.RenameModalView({el: $('#operation-modal')});
         ibook.deleteModalView = new ibook.DeleteModalView({el: $('#operation-modal')});
 
+        // Wizard views
+
+        ibook.wizardView = new ibook.WizardView({el: $('#wizard')});
+        ibook.wizardInputSectionView = new ibook.WizardInputSectionView();
+
         //
         // Support views
         //
         ibook.loadingView = new ibook.LoadingView();
+        // ibook.optionsView = new ibook.OptionsView();
+        ibook.alertView = new ibook.AlertView();
+        ibook.validationErrorView = new ibook.ValidationErrorView();
 
         //
         // Render
@@ -61,7 +69,7 @@ ibook.Router = Backbone.Router.extend({
 
 
 $(document).on("ready", function () {
-    ibook.loadTemplates(["LoadingView", "TreeView", "DetailView", "RenameModalView", "DeleteModalView"],
+    ibook.loadTemplates(["LoadingView", "OptionsView", "AlertView", "TreeView", "DetailView", "RenameModalView", "DeleteModalView", "WizardView", "WizardInputSectionView", "ValidationErrorView"],
         function () {
             ibook.router = new ibook.Router();
             Backbone.history.start();
@@ -74,9 +82,10 @@ $(document).on("ready", function () {
             //
             // Controllers
             //
-            ibook.MainController = new ibook.MainController();
+            ibook.mainController = new ibook.MainController();
             ibook.renameController = new ibook.RenameController();
             ibook.deleteController = new ibook.DeleteController();
+            ibook.uploadController = new ibook.UploadController();
 
         });
 });

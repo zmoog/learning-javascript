@@ -1,0 +1,1 @@
+Backbone.Validator.formats['foldername'] = /^([a-zA-Z_0-9]+.?)*[a-zA-Z_0-9]+$/;

@@ -1,9 +1,15 @@
 ibook.TreeView = Backbone.View.extend({
 
-	initialize: function () {},
+	initialize: function () {
 
-    onClick: function() {
-        var node = $('#tree-container').tree('getSelected');
+        console.log('getSelected', this.getSelected);
+    },
+
+    onClick: function(node) {
+
+        console.log(node);
+        console.log(this.selected());
+
         ibook.eventAggregator.trigger('node:selected', node);
     },
 
@@ -35,10 +41,14 @@ ibook.TreeView = Backbone.View.extend({
 
     render: function() {
         
+        var that = this;
+
         this.$el.tree({
             url: 'data/tree.json', 
             method: 'get',
-            onClick: this.onClick
+            onClick: function(node) {
+                that.onClick(node);
+            }
         });
         return this;
     }

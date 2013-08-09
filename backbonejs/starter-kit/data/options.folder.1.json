@@ -1,0 +1,7 @@
+{
+	"options": [
+		{"value": "1", "label": "Anagrafico 1"},
+		{"value": "2", "label": "Anagrafico 2"},
+		{"value": "3", "label": "Anagrafico 3"}
+	]
+}

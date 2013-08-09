@@ -1,0 +1,21 @@
+<p>
+	<%= name %>
+</p>
+
+<% _.each(properties, function(property, index, list) { %>
+
+<div class="control-group">
+
+	<% if (property.type === 'check') { %>
+
+		<label class="checkbox">
+        	<input name="<%= property.name %>" type="checkbox"> <%= property.text %>
+        </label>
+
+	<% } else {%>
+		<input type="text" name="<%= property.name %>"></input><label><%= property.text %></label>
+	<% } %>
+
+</div>
+
+<% }); %>

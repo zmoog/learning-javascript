@@ -1,0 +1,200 @@
+
+
+<h1>Nuovo documento</h1>
+
+<% if (_.contains(cards, 'card-document-type')) { %>
+
+<div class="wizard-card" data-cardname="card-document-type">
+	<h3>Tipo dossier</h3>
+
+	<div class="wizard-input-section">
+		<p>
+			Selezione il tipo dossier.
+		</p>
+
+		<div class="control-group">
+			
+			<select id="wizard-folder-type-select" data-placeholder="Tipo dossier" style="width:350px;" class="chzn-select">
+            	
+            </select>
+
+		</div>
+
+	</div>
+
+	<div class="wizard-input-section">
+
+		<p>
+			Seleziona il tipo documento.
+		</p>
+
+		<div class="control-group">
+			<select id="wizard-document-type-select" data-placeholder="Monitor nodes" style="width:350px;" class="chzn-select">
+<!--            <option>Consensi cliente (DUC)</option>
+            	<option>Patente</option>
+            	<option>Carta di soggiorno</option>
+            	<option>Porto d'armi</option>
+            	<option>Altro</option>
+            	<option>Permesso di soggiorno</option>
+            	<option>Tessera postale</option>
+            	<option>Passaporto</option>
+            	<option>Carta d'identità</option> 
+            -->
+            </select>
+		</div>
+
+	</div>
+
+</div>
+
+<% } %>
+
+
+<% if (_.contains(cards, 'card-document-properties')) { %>
+
+<div class="wizard-card" data-cardname="card-document-properties">
+	
+	<h3>Proprietà del documento</h3>
+
+	<div id="wizard-input-document-properties-section" class="wizard-input-section">
+
+	</div>
+
+</div>
+
+<% } %>
+
+
+<@ if (_.contains(cards, 'card-scanner-options')) { @>
+<div class="wizard-card" data-cardname="card-scanner-options">
+	<h3>Opzioni dello scanner</h3>
+
+	<div class="wizard-input-section">
+		<p>
+			Acquisizione Documenti
+		</p>
+
+		<div class="control-group">
+			
+			<select id="wizard-feeder-select" data-placeholder="Acquisizione Documenti" style="width:350px;" class="chzn-select">
+				<option value="1" selected="selected">Automatic Document Feeder (ADF)</option>
+				<option value="0">Piatto/Vetro (Una pagina alla volta)</option>
+            </select>
+
+		</div>
+
+	</div>
+	
+	<div class="wizard-input-section">
+		<p>
+			Fronte/Retro
+		</p>
+
+		<div class="control-group">
+			
+			<select id="wizard-duplex-select" data-placeholder="Acquisizione Documenti" style="width:350px;" class="chzn-select">
+				<option value="0" selected="selected">Simplex(Fronte)</option>
+				<option value="1">Duplex(Fronte/Retro)</option>
+            </select>
+
+		</div>
+
+	</div>
+	
+<!-- 	<div class="wizard-input-section">
+		<p>
+			Effettua la scansione del documento.
+		</p>
+
+		<div class="control-group">
+			<button id="wizard-scanner-options-scan-button" class="btn btn-primary" type="button">Scansione</button>
+		</div>
+		
+	</div>	 -->
+		
+</div>
+<@ } @>
+
+
+
+<@ if (_.contains(cards, 'card-scanner-document-name')) { @>
+<div class="wizard-card" data-cardname="card-scanner-document-name">
+	<h3>Nome documento</h3>
+
+	<div class="wizard-input-section">
+		<p>
+			Nome documento da scansionare.
+		</p>
+		
+		<div class="control-group">
+			<input id="wizard-scanner-document-name" type="text" class="input-xlarge"></input>
+		</div>
+		
+		<div class="control-group">
+			<div id="wizard-scanner-document-name-messages"></div>
+		</div>		
+	</div>
+	
+</div>
+<@ } @>
+
+
+<% if (_.contains(cards, 'card-file-upload')) { %>
+
+<div class="wizard-card" data-cardname="card-file-upload">
+	<h3>Upload</h3>
+
+	<div class="wizard-input-section">
+		<p>
+			To begin, please enter the IP of your server or the
+			fully-qualified name.
+		</p>
+
+		<div class="control-group">
+			<!-- <input id="wizard-file-uploader" type="file" placeholder="FQDN or IP" data-validate="" /> -->
+
+			<div id="fine-uploader-basic" class="btn btn-primary">
+				<i class="icon-upload icon-white"></i> Click to upload
+				<input id="fine-uploader-basic-filename" type="hidden" name="filename"></input>
+			</div>
+
+		</div>
+
+		<div class="control-group">
+			<div id="fine-uploader-basic-messages"></div>
+		</div>
+
+	</div>
+</div>
+
+<% } %>
+
+<% if (_.contains(cards, 'document-creation-confirm')) { %>
+
+<div class="wizard-card" data-cardname="document-creation-confirm">
+	<h3>Conferma</h3>
+
+	<div class="wizard-input-section">
+		<p>
+			Il file &egrave; stato caricato nel sistema e il documento ora pu&ograve; essere creato.
+		</p>
+
+	</div>
+</div>
+
+<% } %>
+
+<div class="wizard-success">
+	<div class="alert alert-success">
+		<span class="create-server-name"></span>
+		Il documento &egrave; stato creato <strong>con successo.</strong>
+	</div>
+
+<!-- 
+	<a class="btn create-another-server">Create another server</a>
+		<span style="padding:0 10px">or</span>
+	<a class="btn im-done">Done</a> 
+-->
+
+</div>			
+
