@@ -1,0 +1,34 @@
+[
+{
+"data": "2013",
+"state": "closed",
+"attr": {
+"id": "d29ya3NwYWNlOi8vU3BhY2VzU3RvcmUvZmVhMDg4NTQtMTJlMC00NzVhLTkzYjUtYTc0MDNmOWM4NzBi",
+"rel": "folder"
+}
+},
+{
+"data": "corrado-guzzanti-aniene-171893.jpg",
+"state": null,
+"attr": {
+"id": "d29ya3NwYWNlOi8vU3BhY2VzU3RvcmUvMjhkZjA3ZTAtYmFhNi00YzI0LWI3MmQtMzFjZTg3NTkzZTA0OzEuMA==",
+"rel": null
+}
+},
+{
+"data": "Test",
+"state": "closed",
+"attr": {
+"id": "d29ya3NwYWNlOi8vU3BhY2VzU3RvcmUvOTQyZjhiZjMtYjI0OS00Yjg4LTg0ZjctNWRlZGYyNjNlODMx",
+"rel": "folder"
+}
+},
+{
+"data": "mole.gif",
+"state": null,
+"attr": {
+"id": "d29ya3NwYWNlOi8vU3BhY2VzU3RvcmUvM2YxMGYwZTUtMWMwNi00M2MzLWE0OGEtOGVhMDUzZDVkMWIyOzEuMA==",
+"rel": null
+}
+}
+]

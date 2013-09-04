@@ -1,0 +1,69 @@
+/*
+ * jsTree default theme 1.0
+ * Supported features: dots/no-dots, icons/no-icons, focused, loading
+ * Supported plugins: ui (hovered, clicked), checkbox, contextmenu, search
+ */
+
+.jstree-allianz li, 
+.jstree-allianz ins { background-image:url("images/glyphicons-halflings.png"); background-repeat:no-repeat; background-color:transparent; }
+.jstree-allianz li {
+	white-space: nowrap;
+}
+.jstree-allianz li.jstree-last { background:transparent; }
+.jstree-allianz .jstree-leaf > ins { background:transparent; }
+.jstree-allianz .jstree-open > ins { background-position: -313px -119px; }
+.jstree-allianz .jstree-closed > ins { background-position: -456px -72px; }
+
+.jstree-allianz .jstree-hovered { 
+	background: #819CCC;
+	color: #FFFFFF;
+}
+.jstree-allianz .jstree-clicked { 
+	background: #819CCC;
+	color: #FFFFFF;
+}
+.jstree-allianz a .jstree-icon { background-position: -384px -120px; }
+.jstree-allianz li.jstree-open > a .jstree-icon { background-position: -408px -120px; }
+.jstree-allianz li.jstree-closed > a .jstree-icon { background-position: -384px -120px; }
+.jstree-allianz li.jstree-leaf > a > .jstree-icon { background-position: -24px -24px; }
+.jstree-allianz li.jstree-leaf[cmisbasetype=cmis\:folder] > a > .jstree-icon { background-position: -384px -120px }
+.jstree-allianz li.jstree-closed > a.jstree-loading > .jstree-icon { background: url('images/loading.gif') no-repeat center center; }
+
+.jstree-allianz.jstree-focused { background:#FFFFFF; }
+
+.jstree-allianz .jstree-no-dots li, 
+.jstree-allianz .jstree-no-dots .jstree-leaf > ins { background:transparent; }
+.jstree-allianz .jstree-no-dots .jstree-open > ins { background-position: -313px -119px; }
+.jstree-allianz .jstree-no-dots .jstree-closed > ins { background-position: -456px -72px; }
+
+.jstree-allianz .jstree-no-icons a .jstree-icon { display:none; }
+
+.jstree-allianz .jstree-search { font-style:italic; }
+
+.jstree-allianz .jstree-no-icons .jstree-checkbox { display:inline-block; }
+.jstree-allianz .jstree-no-checkboxes .jstree-checkbox { display:none !important; }
+.jstree-allianz .jstree-checked > a > .jstree-checkbox { background-position:-38px -19px; }
+.jstree-allianz .jstree-unchecked > a > .jstree-checkbox { background-position:-2px -19px; }
+.jstree-allianz .jstree-undetermined > a > .jstree-checkbox { background-position:-20px -19px; }
+.jstree-allianz .jstree-checked > a > .jstree-checkbox:hover { background-position:-38px -37px; }
+.jstree-allianz .jstree-unchecked > a > .jstree-checkbox:hover { background-position:-2px -37px; }
+.jstree-allianz .jstree-undetermined > a > .jstree-checkbox:hover { background-position:-20px -37px; }
+
+#vakata-dragged.jstree-allianz ins { background:transparent !important; }
+#vakata-dragged.jstree-allianz .jstree-ok { background:url("d.png") -2px -53px no-repeat !important; }
+#vakata-dragged.jstree-allianz .jstree-invalid { background:url("d.png") -18px -53px no-repeat !important; }
+#jstree-marker.jstree-allianz { background:url("d.png") -41px -57px no-repeat !important; text-indent:-100px; }
+
+.jstree-allianz a.jstree-search { color:aqua; }
+.jstree-allianz .jstree-locked a { color:silver; cursor:default; }
+
+#vakata-contextmenu.jstree-allianz-context, 
+#vakata-contextmenu.jstree-allianz-context li ul { background:#f0f0f0; border:1px solid #979797; -moz-box-shadow: 1px 1px 2px #999; -webkit-box-shadow: 1px 1px 2px #999; box-shadow: 1px 1px 2px #999; }
+#vakata-contextmenu.jstree-allianz-context li { }
+#vakata-contextmenu.jstree-allianz-context a { color:black; }
+#vakata-contextmenu.jstree-allianz-context a:hover, 
+#vakata-contextmenu.jstree-allianz-context .vakata-hover > a { padding:0 5px; background:#e8eff7; border:1px solid #aecff7; color:black; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; }
+#vakata-contextmenu.jstree-allianz-context li.jstree-contextmenu-disabled a, 
+#vakata-contextmenu.jstree-allianz-context li.jstree-contextmenu-disabled a:hover { color:silver; background:transparent; border:0; padding:1px 4px; }
+#vakata-contextmenu.jstree-allianz-context li.vakata-separator { background:white; border-top:1px solid #e0e0e0; margin:0; }
+#vakata-contextmenu.jstree-allianz-context li ul { margin-left:-4px; }

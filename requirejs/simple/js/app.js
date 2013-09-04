@@ -1,4 +1,11 @@
 requirejs.config({
+
+	config: {
+		'app/views/tree': {
+			cdnContextPath: 'data'
+		}
+	},
+
 	// By default load any module IDs from js/lib
 	baseUrl: 'js/lib',
 	// except, if the module ID starts with "app",
@@ -18,6 +25,10 @@ requirejs.config({
 		},
 		'underscore': {
 			exports: '_'
+		},
+		'puppet': {
+			deps: ['backbone'],
+			exports: 'Puppet'
 		}
 	}
 });
